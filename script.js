@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid');
     let squares = Array.from(document.querySelectorAll('.grid div'))
-    const ScoreDisplay = document.querySelector('#score')
-    const StartBtn = document.querySelector('#start-btn')
+    const scoreDisplay = document.querySelector('#score')
+    const startBtn = document.querySelector('#start-btn')
     const width = 10
 
     //The Tetrominoes
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
        if(e.keyCode === 37) {
            moveLeft()
        } else if (e.keyCode === 32) {
-           //rotate()
+           rotate()
        } else if (e.keyCode === 39) {
            moveRight()
        } else if (e.keyCode === 40) {
@@ -129,5 +129,15 @@ document.addEventListener('DOMContentLoaded', () => {
        draw()
    }
 
+   //rotate the tetromino
+   function rotate() {
+       undraw()
+       currentRotation ++
+       if(currentRotation === current.length) {
+           currentRotation = 0
+       }
+       current = theTetrominoes[random][currentRotation]
+       draw()
+   }
 })
 
