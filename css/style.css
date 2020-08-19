@@ -1,3 +1,36 @@
+body {
+    background-color: #ebe2ae;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h3 {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #18b566;
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: 0;
+}
+
+button:hover {
+    background-color: #3be687;
+}
+
 .container {
     display: flex;
 }
@@ -8,6 +41,7 @@
     background-color: #ffc145;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
 }
 
 .grid div {
@@ -26,6 +60,7 @@
     display: flex;
     flex-wrap: wrap;
     background-color: #ffc145;
+    border-radius: 8px;
 }
 
 .mini-grid div {
