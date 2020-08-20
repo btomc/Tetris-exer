@@ -33,6 +33,8 @@ button:hover {
 
 .container {
     display: flex;
+    justify-content: flex-end;
+    width: 450px;
 }
 
 .grid {
